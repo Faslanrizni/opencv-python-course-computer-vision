@@ -2,15 +2,18 @@ import os
 
 import cv2
 
-
 # read image
-image_path = os.path.join('.', 'data', 'bird.jpg')
+
+# Construct the image path
+base_dir = os.path.dirname(os.path.abspath(__file__))  # Gets the directory of the current script
+print(base_dir)
+image_path = os.path.join(base_dir, '..', 'data', 'bird.jpeg')  # Navigate to the 'data' folder
 
 img = cv2.imread(image_path)
 
 # write image
 
-cv2.imwrite(os.path.join('.', 'data', 'bird_out.jpg'), img)
+cv2.imwrite(os.path.join(base_dir, '..', 'data', 'bird_out.jpeg'), img)
 
 # visualize image
 
