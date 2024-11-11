@@ -18,4 +18,7 @@ cv2.imwrite(os.path.join(base_dir, '..', 'data', 'bird_out.jpeg'), img)
 # visualize image
 
 cv2.imshow('image', img)
+
+# img will w8 until i press any key
+# 5000 wait 5 second
 cv2.waitKey(0)
