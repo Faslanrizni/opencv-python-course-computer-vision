@@ -3,12 +3,15 @@ import os
 
 import cv2
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
-img = cv2.imread(os.path.join('.', 'dogs.jpg'))
+image_path = os.path.join(base_dir, '..', 'data', 'bird.jpeg')
+
+img = cv2.imread(image_path)
 
 print(img.shape)
 
-cropped_img = img[220:740, 320:940]
+cropped_img = img[0:150, 0:100]
 
 cv2.imshow('img', img)
 cv2.imshow('cropped_img', cropped_img)

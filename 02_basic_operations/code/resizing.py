@@ -2,9 +2,12 @@
 import os
 
 import cv2
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+image_path = os.path.join(base_dir, '..', 'data', 'bird.jpeg')
 
 
-img = cv2.imread(os.path.join('.', 'dogs.jpg'))
+img = cv2.imread(image_path)
 
 resized_img = cv2.resize(img, (640, 640))
 
